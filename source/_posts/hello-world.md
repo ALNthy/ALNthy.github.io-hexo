@@ -1,9 +1,112 @@
 ---
-title: Hello World
+title: 使用Hexo和github pages服务搭建一个免费的博客
 date: 2022-05-06
 categories:
 - 测试
+- hexo
 tag:
 - 测试
+- hexo
+- js
+- git
 ---
-> 你好世界
+ 去年才知道github有个静态站点托管服务，今年了解到了hexo这个框架。索性就拿靠这两个东西来搭建一个简单的博客。
+
+---
+
+## 安装
+
+## 准备工作
+
+- 安装[git](https://registry.npmmirror.com/binary.html?;path=git-for-windows/);
+- 安装[nodejs](http://nodejs.cn/download/);
+- 注册一个github账号;
+- 创建一个项目 项目名为 ”你的github名字“.github.io;
+- 在[这里](https://github.com/settings/tokens)生成自己的个人访问令牌(不懂英文就全选，做好保密工作);
+  
+## 开始安装
+
+打开cmd 在cmd中输入安装hexo
+
+```cmd
+npm install hexo-cli -g
+```
+
+安装成功后在输入一下命令创建并进入博客项目文件夹
+
+```cmd
+hexo init myblog
+cd myblog
+```
+
+这样就构建完成了，输入以下命令浏览博客:
+
+```cmd
+hexo g;hexo s
+```
+
+>hexo博客默认的端口是4000
+
+![4000](images/4000.png)
+
+直接访问http://localhost:4000/，下图就是安装好的样子
+
+![hexo](images/hexo.png)
+
+## 部署博客到github
+
+ 在项目目录下找到_config.yml文件打开并找到deploy，修改它为
+
+ ```yml
+ deploy:
+  type: git
+  repository: 刚刚你创建的github仓库的地址
+  branch: main
+ ```
+
+完成后直接
+
+```cmd
+hexo d
+```
+
+之后会弹出一个giehub界面,你可已选择登录自己的github账号或者输入刚才生成的令牌.
+
+```cmd
+remote: Resolving deltas: 100% (12/12), completed with 8 local objects.
+remote: This repository moved. Please use the new location:
+remote:   https://github.com/ALNthy/alnthy.github.io.git
+To https://github.com/ALNthy/ALNthy.github.io.git
+   23f1eab..37de925  HEAD -> main
+branch 'master' set up to track 'https://github.com/ALNthy/ALNthy.github.io.git/main'.
+INFO  Deploy done: git
+```
+成功！！！！
+
+之后你就可以在浏览器上输入 "你github的名字".github.io 访问你的博客了,例如[ALNthy.github.io](http://ALNthy.github.io)
+
+### 补充一些hexo常用命令
+
+```cmd
+hexo g
+# 编译生成静态文件
+hexo d
+# 部署博客
+hexo g -d
+# g 跟 d 一起使用
+hexo clean
+# 清除以前生成的静态文件。
+# 通常，清理一下可以解决大多数问题。
+hexo s
+# 本地预览博客
+hexo new xxx
+# 新建一篇标题为xxx的文章
+hexo new draft xxx
+# 新建一篇标题为xxx的草稿
+hexo new page xxx
+# 新建一个页面
+hexo help
+#查看帮助
+```
+
+>如果你想了解更多关于hexo的内容和装饰一下自己的博客你可以关注一下hexo的[文档](https://hexo.io/docs/)和[主题](https://hexo.io/themes/)
