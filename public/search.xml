@@ -2,7 +2,7 @@
 <search>
   <entry>
     <title>使用Hexo和github pages服务搭建一个免费的博客</title>
-    <url>/2022/05/06/hello-world/</url>
+    <url>/2022/05/06/1/</url>
     <content><![CDATA[<p> 去年才知道github有个静态站点托管服务，今年了解到了hexo这个框架。索性就拿靠这两个东西来搭建一个简单的博客。</p>
 <hr>
 <h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><h2 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h2><ul>
@@ -53,5 +53,15 @@
         <tag>js</tag>
         <tag>git</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>疫情封校一个月有感</title>
+    <url>/2022/11/25/2/</url>
+    <content><![CDATA[<p>大学一封校就是封三年，再加上学校里这些过于形式主义的奇葩规定，我感觉自己回到了高中。<br>或许我当初选择复读才是正确的选择，而不是像现在这样摆烂。<br>就今年这大环境和这疫情出去实习也别想太多了。<br>今年的疫情和措施比往年更加妖魔化。<br>我曾天真的以为2021年就不会有疫情了。<br>新冠肺炎也就和平常的流感差不多，人们真的在害怕吗?<br>好想回到5年前啊，高中虽然累，但是比现在过的充实且更有动力。<br>无需多想。<br>再怎么思考和抱怨都不会改变什么。<br>好好的过下去吧。<br>路已至此，不得不走。</p>
+]]></content>
+      <categories>
+        <category>日常</category>
+        <category>随笔</category>
+      </categories>
   </entry>
 </search>
