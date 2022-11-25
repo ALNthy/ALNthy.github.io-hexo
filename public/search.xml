@@ -12,7 +12,8 @@
 <li>创建一个项目 项目名为 ”你的github名字“.github.io;</li>
 <li>在<a href="https://github.com/settings/tokens">这里</a>生成自己的个人访问令牌(不懂英文就全选，做好保密工作);</li>
 </ul>
-<h2 id="开始安装"><a href="#开始安装" class="headerlink" title="开始安装"></a>开始安装</h2><p>打开cmd 在cmd中输入安装hexo</p>
+<h2 id="开始安装"><a href="#开始安装" class="headerlink" title="开始安装"></a>开始安装</h2><span id="more"></span>
+<p>打开cmd 在cmd中输入安装hexo</p>
 <figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line">npm install hexo-cli -g</span><br></pre></td></tr></table></figure>
 
 <p>安装成功后在输入一下命令创建并进入博客项目文件夹</p>

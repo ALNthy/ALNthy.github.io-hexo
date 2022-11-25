@@ -74,6 +74,7 @@
   </style>
 </noscript>
 
+<link rel="alternate" href="/atom.xml" title="ALNthy`s BLOG" type="application/atom+xml">
 </head>
 <script src="https://cdn.bootcdn.net/ajax/libs/pjax/0.2.8/pjax.js"></script>
 <link rel="stylesheet" 
@@ -308,7 +309,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-11-25 09:07:40" itemprop="dateModified" datetime="2022-11-25T09:07:40+08:00">2022-11-25</time>
+                <time title="修改时间：2022-11-25 11:35:23" itemprop="dateModified" datetime="2022-11-25T11:35:23+08:00">2022-11-25</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -344,37 +345,15 @@
 <li>创建一个项目 项目名为 ”你的github名字“.github.io;</li>
 <li>在<a target="_blank" rel="noopener" href="https://github.com/settings/tokens">这里</a>生成自己的个人访问令牌(不懂英文就全选，做好保密工作);</li>
 </ul>
-<h2 id="开始安装"><a href="#开始安装" class="headerlink" title="开始安装"></a>开始安装</h2><p>打开cmd 在cmd中输入安装hexo</p>
-<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-cli -g</span><br></pre></td></tr></table></figure>
-
-<p>安装成功后在输入一下命令创建并进入博客项目文件夹</p>
-<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo init myblog</span><br><span class="line"><span class="built_in">cd</span> myblog</span><br></pre></td></tr></table></figure>
-
-<p>这样就构建完成了，输入以下命令浏览博客:</p>
-<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo g;hexo s</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>hexo博客默认的端口是4000</p>
-</blockquote>
-<p><img src="/images/4000.png" alt="4000"></p>
-<p>直接访问<a target="_blank" rel="noopener" href="http://localhost:4000/%EF%BC%8C%E4%B8%8B%E5%9B%BE%E5%B0%B1%E6%98%AF%E5%AE%89%E8%A3%85%E5%A5%BD%E7%9A%84%E6%A0%B7%E5%AD%90">http://localhost:4000/，下图就是安装好的样子</a></p>
-<p><img src="/images/hexo.png" alt="hexo"></p>
-<h2 id="部署博客到github"><a href="#部署博客到github" class="headerlink" title="部署博客到github"></a>部署博客到github</h2><p> 在项目目录下找到_config.yml文件打开并找到deploy，修改它为</p>
- <figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">deploy:</span></span><br><span class="line"> <span class="attr">type:</span> <span class="string">git</span></span><br><span class="line"> <span class="attr">repository:</span> <span class="string">刚刚你创建的github仓库的地址</span></span><br><span class="line"> <span class="attr">branch:</span> <span class="string">main</span></span><br></pre></td></tr></table></figure>
-
-<p>完成后直接</p>
-<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo d</span><br></pre></td></tr></table></figure>
-
-<p>之后会弹出一个giehub界面,你可已选择登录自己的github账号或者输入刚才生成的令牌.</p>
-<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">remote: <span class="title">Resolving</span> <span class="title">deltas</span>: 100% (12/12), <span class="title">completed</span> <span class="title">with</span> 8 <span class="title">local</span> <span class="title">objects</span>.</span></span><br><span class="line"><span class="function"><span class="title">remote</span>: <span class="title">This</span> <span class="title">repository</span> <span class="title">moved</span>. <span class="title">Please</span> <span class="title">use</span> <span class="title">the</span> <span class="title">new</span> <span class="title">location</span>:</span></span><br><span class="line"><span class="function"><span class="title">remote</span>:   <span class="title">https</span>://<span class="title">github.com</span>/<span class="title">ALNthy</span>/<span class="title">alnthy.github.io.git</span></span></span><br><span class="line"><span class="function"><span class="title">To</span> <span class="title">https</span>://<span class="title">github.com</span>/<span class="title">ALNthy</span>/<span class="title">ALNthy.github.io.git</span></span></span><br><span class="line"><span class="function">   23<span class="title">f1eab</span>..37<span class="title">de925</span>  <span class="title">HEAD</span> -&gt; <span class="title">main</span></span></span><br><span class="line"><span class="function"><span class="title">branch</span> &#x27;<span class="title">master</span>&#x27; <span class="title">set</span> <span class="title">up</span> <span class="title">to</span> <span class="title">track</span> &#x27;<span class="title">https</span>://<span class="title">github.com</span>/<span class="title">ALNthy</span>/<span class="title">ALNthy.github.io.git</span>/<span class="title">main</span>&#x27;.</span></span><br><span class="line"><span class="function"><span class="title">INFO</span>  <span class="title">Deploy</span> <span class="title">done</span>: <span class="title">git</span></span></span><br></pre></td></tr></table></figure>
-<p>成功！！！！</p>
-<p>之后你就可以在浏览器上输入 “你github的名字”.github.io 访问你的博客了,例如<a href="http://alnthy.github.io/">ALNthy.github.io</a></p>
-<h3 id="补充一些hexo常用命令"><a href="#补充一些hexo常用命令" class="headerlink" title="补充一些hexo常用命令"></a>补充一些hexo常用命令</h3><figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">hexo g</span><br><span class="line"># 编译生成静态文件</span><br><span class="line">hexo d</span><br><span class="line"># 部署博客</span><br><span class="line">hexo g -d</span><br><span class="line"># g 跟 d 一起使用</span><br><span class="line">hexo clean</span><br><span class="line"># 清除以前生成的静态文件。</span><br><span class="line"># 通常，清理一下可以解决大多数问题。</span><br><span class="line">hexo s</span><br><span class="line"># 本地预览博客</span><br><span class="line">hexo new xxx</span><br><span class="line"># 新建一篇标题为xxx的文章</span><br><span class="line">hexo new draft xxx</span><br><span class="line"># 新建一篇标题为xxx的草稿</span><br><span class="line">hexo new page xxx</span><br><span class="line"># 新建一个页面</span><br><span class="line">hexo <span class="built_in">help</span></span><br><span class="line">#查看帮助</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>如果你想了解更多关于hexo的内容和装饰一下自己的博客你可以关注一下hexo的<a target="_blank" rel="noopener" href="https://hexo.io/docs/">文档</a>和<a target="_blank" rel="noopener" href="https://hexo.io/themes/">主题</a></p>
-</blockquote>
-
+<h2 id="开始安装"><a href="#开始安装" class="headerlink" title="开始安装"></a>开始安装</h2>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2022/05/06/1/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
