@@ -65,4 +65,35 @@
         <category>随笔</category>
       </categories>
   </entry>
+  <entry>
+    <title>C#中的泛型</title>
+    <url>/2022/12/05/3/</url>
+    <content><![CDATA[<p>泛型 (Generic)，是将不确定的类型预先定义下来的一种C#高级语法，我们在使用一个类，接口或者方法前，不知道用户将来传什么类型，或者我们写的类，接口或方法相同的代码可以服务不同的类型，就可以定义为泛型。<br>平时编程时经常会遇到功能相似但是处理的数据的却不同的场景，这时候泛型就能解决此类问题;</p>
+<span id="more"></span>
+
+<h2 id="泛型的定义"><a href="#泛型的定义" class="headerlink" title="泛型的定义"></a>泛型的定义</h2><p>支持泛型定义的数据结构有类，接口，方法，委托</p>
+<figure class="highlight c#"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title">MyGeneric</span>&lt;<span class="title">T</span>&gt;</span>&#123;...code...&#125;<span class="comment">//泛型类</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> T <span class="title">GenericMethod</span>&lt;<span class="title">T</span>&gt;</span>&#123;...code...&#125;<span class="comment">//泛型方法</span></span><br><span class="line"><span class="keyword">interface</span> <span class="title">IGeneric</span>&lt;<span class="title">T</span>&gt;&#123;...code...&#125;<span class="comment">//泛型接口</span></span><br><span class="line"><span class="function"><span class="built_in">delegate</span> <span class="keyword">void</span> <span class="title">DeleGeneric</span>&lt;<span class="title">T1</span>,<span class="title">T2</span>&gt;()</span>;<span class="comment">//泛型委托</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="泛型的常用场景"><a href="#泛型的常用场景" class="headerlink" title="泛型的常用场景"></a>泛型的常用场景</h2><h3 id="最常见的场景之一"><a href="#最常见的场景之一" class="headerlink" title="最常见的场景之一"></a>最常见的场景之一</h3><p>除了传入的参数不同外，其里面实现的功能都是一样的</p>
+<figure class="highlight c#"><table><tr><td class="code"><pre><span class="line"><span class="keyword">namespace</span> <span class="title">ceshi</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">class</span> <span class="title">ClassT</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">TestPrint</span>(<span class="params"><span class="built_in">string</span> str</span>)</span></span><br><span class="line">        &#123;</span><br><span class="line">            Console.WriteLine(str);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">TestPrint</span>(<span class="params"><span class="built_in">int</span> i32</span>)</span></span><br><span class="line">        &#123;</span><br><span class="line">            Console.WriteLine(i32);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">TestPrint</span>(<span class="params">DateTime dateTime</span>)</span></span><br><span class="line">        &#123;</span><br><span class="line">            Console.WriteLine(dateTime);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">class</span> <span class="title">Ceshi</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">Main</span>()</span></span><br><span class="line">        &#123;</span><br><span class="line">            ClassT.TestPrint(<span class="string">&quot;泛型&quot;</span>);</span><br><span class="line">            ClassT.TestPrint(<span class="number">10086</span>);</span><br><span class="line">            ClassT.TestPrint(DateTime.Now);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>输出:</p>
+<figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line">泛型</span><br><span class="line"><span class="number">10086</span></span><br><span class="line"><span class="number">2022</span>/<span class="number">12</span>/<span class="number">5</span> <span class="number">18</span>:<span class="number">21</span>:<span class="number">59</span></span><br></pre></td></tr></table></figure>
+
+<p>使用泛型简化:</p>
+<figure class="highlight c#"><table><tr><td class="code"><pre><span class="line"><span class="keyword">namespace</span> <span class="title">ceshi</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">class</span> <span class="title">ClassT</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">TestPrint</span>&lt;<span class="title">T</span>&gt;(<span class="params">T t</span>)</span></span><br><span class="line">        &#123;</span><br><span class="line">            Console.WriteLine(t);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">class</span> <span class="title">Ceshi</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">Main</span>()</span></span><br><span class="line">        &#123;</span><br><span class="line">            ClassT.TestPrint(<span class="string">&quot;泛型&quot;</span>);</span><br><span class="line">            ClassT.TestPrint(<span class="number">10086</span>);</span><br><span class="line">            ClassT.TestPrint(DateTime.Now);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>输出：</p>
+<figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line">泛型</span><br><span class="line"><span class="number">10086</span></span><br><span class="line"><span class="number">2022</span>/<span class="number">12</span>/<span class="number">5</span> <span class="number">18</span>:<span class="number">25</span>:<span class="number">35</span></span><br></pre></td></tr></table></figure>
+
+<p>由此可见泛型大大减少了代码重复度</p>
+]]></content>
+      <categories>
+        <category>C#</category>
+        <category>学习</category>
+      </categories>
+      <tags>
+        <tag>C#</tag>
+      </tags>
+  </entry>
 </search>
