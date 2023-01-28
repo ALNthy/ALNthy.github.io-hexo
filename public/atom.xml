@@ -6,7 +6,7 @@
   <link href="https://alnthy.github.io/atom.xml" rel="self"/>
   
   <link href="https://alnthy.github.io/"/>
-  <updated>2022-12-16T08:51:59.833Z</updated>
+  <updated>2023-01-28T07:00:36.672Z</updated>
   <id>https://alnthy.github.io/</id>
   
   <author>
@@ -17,15 +17,23 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>提前回家</title>
+    <title>11月疫情后12月9日提前放假回家</title>
     <link href="https://alnthy.github.io/2022/12/09/4/"/>
     <id>https://alnthy.github.io/2022/12/09/4/</id>
     <published>2022-12-09T08:50:31.000Z</published>
-    <updated>2022-12-16T08:51:59.833Z</updated>
+    <updated>2023-01-28T07:00:36.672Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;十一月被关在学校里一个月，十二月九日就踏上回家的路途。&lt;br&gt;这次放寒假也意味着三年的&lt;del&gt;大专&lt;/del&gt;（大学）生活就此结束，来年也要为实习忙碌。&lt;/p&gt;</summary>
     
     
     
+    <category term="生活日常" scheme="https://alnthy.github.io/categories/%E7%94%9F%E6%B4%BB%E6%97%A5%E5%B8%B8/"/>
     
+    
+    <category term="生活" scheme="https://alnthy.github.io/tags/%E7%94%9F%E6%B4%BB/"/>
+    
+    <category term="日常" scheme="https://alnthy.github.io/tags/%E6%97%A5%E5%B8%B8/"/>
     
   </entry>
   
@@ -47,31 +55,6 @@
     
     
     <category term="C#" scheme="https://alnthy.github.io/tags/C/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>疫情封校一个月有感</title>
-    <link href="https://alnthy.github.io/2022/11/25/2/"/>
-    <id>https://alnthy.github.io/2022/11/25/2/</id>
-    <published>2022-11-24T16:00:00.000Z</published>
-    <updated>2022-11-25T03:12:11.545Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;大学一封校就是封三年，再加上学校里这些过于形式主义的奇葩规定，我感觉自己回到了高中。&lt;br&gt;或许我当初选择复读才是正确的选择，而不是像现在这样摆烂。&lt;br&gt;就今年这大环境和这疫情出去实习也别想太多了。&lt;br&gt;今年的疫情和措施比往年更加妖魔化。&lt;br&gt;我曾天真的以为2021年</summary>
-        
-      
-    
-    
-    
-    <category term="日常" scheme="https://alnthy.github.io/categories/%E6%97%A5%E5%B8%B8/"/>
-    
-    <category term="随笔" scheme="https://alnthy.github.io/categories/%E6%97%A5%E5%B8%B8/%E9%9A%8F%E7%AC%94/"/>
-    
     
   </entry>
   
