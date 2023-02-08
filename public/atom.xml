@@ -6,7 +6,7 @@
   <link href="https://alnthy.github.io/atom.xml" rel="self"/>
   
   <link href="https://alnthy.github.io/"/>
-  <updated>2023-01-28T07:00:36.672Z</updated>
+  <updated>2023-02-08T12:50:39.335Z</updated>
   <id>https://alnthy.github.io/</id>
   
   <author>
@@ -17,14 +17,37 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>docker学习笔记</title>
+    <link href="https://alnthy.github.io/2023/02/02/docker%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    <id>https://alnthy.github.io/2023/02/02/docker%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</id>
+    <published>2023-02-01T23:57:45.000Z</published>
+    <updated>2023-02-08T12:50:39.335Z</updated>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;什么是docker？&quot;&gt;&lt;a href=&quot;#什么是docker？&quot; class=&quot;headerlink&quot; title=&quot;什么是docker？&quot;&gt;&lt;/a&gt;什么是docker？&lt;/h2&gt;&lt;p&gt;Docker 是一个开源的应用容器引擎，让开发者可以打包他们的应用以及依赖包到一个可移植的容器中,然后发布到任何流行的Linux或Windows操作系统的机器上,也可以实现虚拟化,容器是完全使用沙箱机制,相互之间不会有任何接口。 —- &lt;a href=&quot;http://nodejs.cn/download/&quot;&gt;百度百科&lt;/a&gt;&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="docker" scheme="https://alnthy.github.io/categories/docker/"/>
+    
+    <category term="学习" scheme="https://alnthy.github.io/categories/docker/%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+    <category term="docker" scheme="https://alnthy.github.io/tags/docker/"/>
+    
+    <category term="学习" scheme="https://alnthy.github.io/tags/%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
+  
+  <entry>
     <title>11月疫情后12月9日提前放假回家</title>
     <link href="https://alnthy.github.io/2022/12/09/4/"/>
     <id>https://alnthy.github.io/2022/12/09/4/</id>
     <published>2022-12-09T08:50:31.000Z</published>
-    <updated>2023-01-28T07:00:36.672Z</updated>
+    <updated>2023-02-02T00:37:38.495Z</updated>
     
     
-    <summary type="html">&lt;p&gt;十一月被关在学校里一个月，十二月九日就踏上回家的路途。&lt;br&gt;这次放寒假也意味着三年的&lt;del&gt;大专&lt;/del&gt;（大学）生活就此结束，来年也要为实习忙碌。&lt;/p&gt;</summary>
+    <summary type="html">&lt;p&gt;十一月被关在学校里一个月，十二月九日就踏上回家的路途。&lt;br&gt;这次放寒假也意味着三年的 &lt;del&gt;大专&lt;/del&gt;（大学）生活就此结束，来年也要为实习忙碌。&lt;/p&gt;</summary>
     
     
     
@@ -42,10 +65,10 @@
     <link href="https://alnthy.github.io/2022/12/05/3/"/>
     <id>https://alnthy.github.io/2022/12/05/3/</id>
     <published>2022-12-05T09:55:08.000Z</published>
-    <updated>2022-12-05T10:28:53.545Z</updated>
+    <updated>2023-02-02T00:33:12.953Z</updated>
     
     
-    <summary type="html">&lt;p&gt;泛型 (Generic)，是将不确定的类型预先定义下来的一种C#高级语法，我们在使用一个类，接口或者方法前，不知道用户将来传什么类型，或者我们写的类，接口或方法相同的代码可以服务不同的类型，就可以定义为泛型。&lt;br&gt;平时编程时经常会遇到功能相似但是处理的数据的却不同的场景，这时候泛型就能解决此类问题;&lt;/p&gt;</summary>
+    <summary type="html">&lt;p&gt;泛型 (Generic)，是将不确定的类型预先定义下来的一种C#高级语法，我们在使用一个类，接口或者方&lt;br&gt;法前，不知道用户将来传什么类型，或者我们写的类，接口或方法相同的代码可以服务不同的类型，就可&lt;br&gt;以定义为泛型。&lt;br&gt;平时编程时经常会遇到功能相似但是处理的数据的却不同的场景，这时候泛型就能解决此类问题;&lt;/p&gt;</summary>
     
     
     

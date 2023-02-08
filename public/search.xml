@@ -58,13 +58,15 @@
   <entry>
     <title>C#中的泛型</title>
     <url>/2022/12/05/3/</url>
-    <content><![CDATA[<p>泛型 (Generic)，是将不确定的类型预先定义下来的一种C#高级语法，我们在使用一个类，接口或者方法前，不知道用户将来传什么类型，或者我们写的类，接口或方法相同的代码可以服务不同的类型，就可以定义为泛型。<br>平时编程时经常会遇到功能相似但是处理的数据的却不同的场景，这时候泛型就能解决此类问题;</p>
+    <content><![CDATA[<p>泛型 (Generic)，是将不确定的类型预先定义下来的一种C#高级语法，我们在使用一个类，接口或者方<br>法前，不知道用户将来传什么类型，或者我们写的类，接口或方法相同的代码可以服务不同的类型，就可<br>以定义为泛型。<br>平时编程时经常会遇到功能相似但是处理的数据的却不同的场景，这时候泛型就能解决此类问题;</p>
 <span id="more"></span>
 
-<h2 id="泛型的定义"><a href="#泛型的定义" class="headerlink" title="泛型的定义"></a>泛型的定义</h2><p>支持泛型定义的数据结构有类，接口，方法，委托</p>
+<h2 id="泛型的定义"><a href="#泛型的定义" class="headerlink" title="泛型的定义"></a>泛型的定义</h2><pre><code>支持泛型定义的数据结构有类，接口，方法，委托
+</code></pre>
 <figure class="highlight c#"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title">MyGeneric</span>&lt;<span class="title">T</span>&gt;</span>&#123;...code...&#125;<span class="comment">//泛型类</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> T <span class="title">GenericMethod</span>&lt;<span class="title">T</span>&gt;</span>&#123;...code...&#125;<span class="comment">//泛型方法</span></span><br><span class="line"><span class="keyword">interface</span> <span class="title">IGeneric</span>&lt;<span class="title">T</span>&gt;&#123;...code...&#125;<span class="comment">//泛型接口</span></span><br><span class="line"><span class="function"><span class="built_in">delegate</span> <span class="keyword">void</span> <span class="title">DeleGeneric</span>&lt;<span class="title">T1</span>,<span class="title">T2</span>&gt;()</span>;<span class="comment">//泛型委托</span></span><br></pre></td></tr></table></figure>
 
-<h2 id="泛型的常用场景"><a href="#泛型的常用场景" class="headerlink" title="泛型的常用场景"></a>泛型的常用场景</h2><h3 id="最常见的场景之一"><a href="#最常见的场景之一" class="headerlink" title="最常见的场景之一"></a>最常见的场景之一</h3><p>除了传入的参数不同外，其里面实现的功能都是一样的</p>
+<h2 id="泛型的常用场景"><a href="#泛型的常用场景" class="headerlink" title="泛型的常用场景"></a>泛型的常用场景</h2><h3 id="最常见的场景之一"><a href="#最常见的场景之一" class="headerlink" title="最常见的场景之一"></a>最常见的场景之一</h3><pre><code>除了传入的参数不同外，其里面实现的功能都是一样的
+</code></pre>
 <figure class="highlight c#"><table><tr><td class="code"><pre><span class="line"><span class="keyword">namespace</span> <span class="title">ceshi</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">class</span> <span class="title">ClassT</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">TestPrint</span>(<span class="params"><span class="built_in">string</span> str</span>)</span></span><br><span class="line">        &#123;</span><br><span class="line">            Console.WriteLine(str);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">TestPrint</span>(<span class="params"><span class="built_in">int</span> i32</span>)</span></span><br><span class="line">        &#123;</span><br><span class="line">            Console.WriteLine(i32);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">TestPrint</span>(<span class="params">DateTime dateTime</span>)</span></span><br><span class="line">        &#123;</span><br><span class="line">            Console.WriteLine(dateTime);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">class</span> <span class="title">Ceshi</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">Main</span>()</span></span><br><span class="line">        &#123;</span><br><span class="line">            ClassT.TestPrint(<span class="string">&quot;泛型&quot;</span>);</span><br><span class="line">            ClassT.TestPrint(<span class="number">10086</span>);</span><br><span class="line">            ClassT.TestPrint(DateTime.Now);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p>输出:</p>
@@ -76,7 +78,8 @@
 <p>输出：</p>
 <figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line">泛型</span><br><span class="line"><span class="number">10086</span></span><br><span class="line"><span class="number">2022</span>/<span class="number">12</span>/<span class="number">5</span> <span class="number">18</span>:<span class="number">25</span>:<span class="number">35</span></span><br></pre></td></tr></table></figure>
 
-<p>由此可见泛型大大减少了代码重复度</p>
+<pre><code>由此可见泛型大大减少了代码重复度
+</code></pre>
 ]]></content>
       <categories>
         <category>C#</category>
@@ -89,7 +92,7 @@
   <entry>
     <title>11月疫情后12月9日提前放假回家</title>
     <url>/2022/12/09/4/</url>
-    <content><![CDATA[<p>十一月被关在学校里一个月，十二月九日就踏上回家的路途。<br>这次放寒假也意味着三年的<del>大专</del>（大学）生活就此结束，来年也要为实习忙碌。</p>
+    <content><![CDATA[<p>十一月被关在学校里一个月，十二月九日就踏上回家的路途。<br>这次放寒假也意味着三年的 <del>大专</del>（大学）生活就此结束，来年也要为实习忙碌。</p>
 <span id="more"></span>
 <center>
     <img style="border-radius: 0.3125em;
@@ -126,7 +129,8 @@
 </center>
 
 
-<p>十二月疫情政策也开始放开了，出行不用在看码了,这三年疫情终于结束了</p>
+<pre><code>十二月疫情政策也开始放开了，出行不用在看码了,这三年疫情终于结束了
+</code></pre>
 <center>
     <img style="border-radius: 0.3125em;
     box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);" 
@@ -174,7 +178,8 @@
     <br>
 </center>
 
-<p>安全到家。</p>
+<pre><code>安全到家。
+</code></pre>
 <br>
 
 <center>
@@ -196,6 +201,37 @@
       <tags>
         <tag>生活</tag>
         <tag>日常</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>docker学习笔记</title>
+    <url>/2023/02/02/docker%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</url>
+    <content><![CDATA[<h2 id="什么是docker？"><a href="#什么是docker？" class="headerlink" title="什么是docker？"></a>什么是docker？</h2><p>Docker 是一个开源的应用容器引擎，让开发者可以打包他们的应用以及依赖包到一个可移植的容器中,然后发布到任何流行的Linux或Windows操作系统的机器上,也可以实现虚拟化,容器是完全使用沙箱机制,相互之间不会有任何接口。 —- <a href="http://nodejs.cn/download/">百度百科</a></p>
+<span id="more"></span>
+<h2 id="安装docker"><a href="#安装docker" class="headerlink" title="安装docker"></a>安装docker</h2><p>操作系统：ubuntu</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">sudo curl -sSL get.docker.com | sh</span><br></pre></td></tr></table></figure>
+
+<h2 id="🐳docker核心工作流"><a href="#🐳docker核心工作流" class="headerlink" title="🐳docker核心工作流"></a>🐳docker核心工作流</h2><pre><code>Dockerfile -&gt; Image -&gt; Container
+</code></pre>
+<h3 id="Dockerfile-定制镜像文件"><a href="#Dockerfile-定制镜像文件" class="headerlink" title="Dockerfile 定制镜像文件"></a>Dockerfile 定制镜像文件</h3><p>Dockerfile是一个包含用于组合映像的命令的文本文档。可以使用在命令行中调用任何命令。 Docker通过读取Dockerfile中的指令自动生成映像。</p>
+<h3 id="Image-镜像"><a href="#Image-镜像" class="headerlink" title="Image 镜像"></a>Image 镜像</h3><p>Image是通过Dockerfile build生成的一个特殊的文件系统，包含了容器运行所需的所有程序，库，资源。不包含任何动态数据，一旦构建之后内容也不会被改变。</p>
+<h3 id="Container-容器"><a href="#Container-容器" class="headerlink" title="Container 容器"></a>Container 容器</h3><p>Dockerfile,Image,Container的关系类似于建筑工程图纸，建筑材料，建筑。容器是镜像运行时的实体，容器可以被创建、启动、停止、删除、暂停等。</p>
+<h2 id="使用🐳docker"><a href="#使用🐳docker" class="headerlink" title="使用🐳docker"></a>使用🐳docker</h2><h3 id="制作Dockerfile文件并创建镜像"><a href="#制作Dockerfile文件并创建镜像" class="headerlink" title="制作Dockerfile文件并创建镜像"></a>制作Dockerfile文件并创建镜像</h3><p>新建一个文件名称必须为Dockerfile</p>
+<figure class="highlight dockerfile"><table><tr><td class="code"><pre><span class="line"><span class="keyword">FROM</span> python:<span class="number">3.10</span>.<span class="number">9</span>-bullseye   <span class="comment">#FROM 从docker hub拉取一个镜像 这里我们拉取python3.10.9 系统是debian bullseye</span></span><br><span class="line"><span class="keyword">WORKDIR</span><span class="language-bash"> /app                  <span class="comment">#WORKDIR 指定后面Dockerfile命令的工作路径 </span></span></span><br><span class="line"><span class="keyword">COPY</span><span class="language-bash"> . .                      <span class="comment">#COPY 将本地的所有文件复制到镜像中</span></span></span><br><span class="line"><span class="keyword">RUN</span><span class="language-bash">  pip3 install -r requirements.txt    <span class="comment">#RUN 在容器中运行命令</span></span></span><br><span class="line"><span class="keyword">CMD</span><span class="language-bash"> [<span class="string">&quot;python3&quot;</span>,<span class="string">&quot;app.py&quot;</span>]      <span class="comment">#CMD 当容器运行起来后要执行的命令</span></span></span><br></pre></td></tr></table></figure>
+
+<h4 id="创建镜像"><a href="#创建镜像" class="headerlink" title="创建镜像"></a>创建镜像</h4><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">docker build -t name .   # 在当前目录下寻找Dockerfile 创建一个镜像名为name的镜像</span><br></pre></td></tr></table></figure>
+
+<h4 id="通过镜像运行容器"><a href="#通过镜像运行容器" class="headerlink" title="通过镜像运行容器"></a>通过镜像运行容器</h4><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">docker build -p 8080:8080 --name my_Container -d name  #创建一个名为my_Container的容器</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight txt"><table><tr><td class="code"><pre><span class="line">参数说明</span><br><span class="line">--name=&quot;名字&quot;           指定容器名字</span><br><span class="line">-d                     后台方式运行</span><br><span class="line">-it                    使用交互方式运行,进入容器查看内容</span><br><span class="line">-p                     指定容器的端口</span><br><span class="line">	-p ip:主机端口:容器端口  配置主机端口映射到容器端口</span><br><span class="line">	-p 主机端口:容器端口（常用）</span><br><span class="line">	-p 容器端口</span><br><span class="line">-P                     随机指定端口</span><br><span class="line">-e					   环境设置</span><br><span class="line">-v					   容器数据卷挂载</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>docker</category>
+        <category>学习</category>
+      </categories>
+      <tags>
+        <tag>docker</tag>
+        <tag>学习</tag>
       </tags>
   </entry>
 </search>
