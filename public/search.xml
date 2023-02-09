@@ -206,7 +206,7 @@
   <entry>
     <title>docker学习笔记</title>
     <url>/2023/02/02/docker%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</url>
-    <content><![CDATA[<h2 id="什么是docker？"><a href="#什么是docker？" class="headerlink" title="什么是docker？"></a>什么是docker？</h2><p>Docker 是一个开源的应用容器引擎，让开发者可以打包他们的应用以及依赖包到一个可移植的容器中,然后发布到任何流行的Linux或Windows操作系统的机器上,也可以实现虚拟化,容器是完全使用沙箱机制,相互之间不会有任何接口。 —- <a href="http://nodejs.cn/download/">百度百科</a></p>
+    <content><![CDATA[<h2 id="什么是docker？"><a href="#什么是docker？" class="headerlink" title="什么是docker？"></a>什么是docker？</h2><p>Docker 是一个开源的应用容器引擎，让开发者可以打包他们的应用以及依赖包到一个可移植的容器中,然后发布到任何流行的Linux或Windows操作系统的机器上,也可以实现虚拟化,容器是完全使用沙箱机制,相互之间不会有任何接口。 —- <a href="https://baike.baidu.com/item/Docker/13344470">百度百科</a></p>
 <span id="more"></span>
 <h2 id="安装docker"><a href="#安装docker" class="headerlink" title="安装docker"></a>安装docker</h2><p>操作系统：ubuntu</p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">sudo curl -sSL get.docker.com | sh</span><br></pre></td></tr></table></figure>
@@ -232,6 +232,26 @@
       <tags>
         <tag>docker</tag>
         <tag>学习</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>关于iStoreOSopenwrt拨号上网ipv6无网络访问权限问题</title>
+    <url>/2023/01/03/%E5%85%B3%E4%BA%8EiStoreOSopenwrt%E6%8B%A8%E5%8F%B7%E4%B8%8A%E7%BD%91ipv6%E6%97%A0%E7%BD%91%E7%BB%9C%E8%AE%BF%E9%97%AE%E6%9D%83%E9%99%90%E9%97%AE%E9%A2%98/</url>
+    <content><![CDATA[<p>今天装上iStoreOS，使用拨号上网时发现电脑在已分配公网ipv6地址的情况下ipv6无网络访问权限。</p>
+<p>自己琢磨了半天发现还是不行，就是ipv6上不了网；</p>
+<p>后面跟着恩山上大佬的帖子和b站的视频操作，取消禁止解析 IPv6 DNS 记录选项，lan接口改服务器模式之类的操作，发现还是不行；</p>
+<p>最后误打误撞的停掉了WAN6口的服务，发现ipv6能上网了！！</p>
+<p>iStoreOS 拨号上网默认带一个WAN6口，拨号成功后又会多出一个PPPOE-WAN6口；</p>
+<p>我猜测可能冲突了，才导致ipv6无法上网；像ipv4那样，局域网内出现多个dhcp服务端就会冲突;</p>
+<p>搞了半天犯了个这么低级的错误，只能说自己懂得太少了，以后还要多学习学习。</p>
+]]></content>
+      <categories>
+        <category>软路由</category>
+      </categories>
+      <tags>
+        <tag>软路由</tag>
+        <tag>linux</tag>
+        <tag>openwrt</tag>
       </tags>
   </entry>
 </search>

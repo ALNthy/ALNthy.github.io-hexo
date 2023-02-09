@@ -6,7 +6,7 @@
   <link href="https://alnthy.github.io/atom.xml" rel="self"/>
   
   <link href="https://alnthy.github.io/"/>
-  <updated>2023-02-08T12:50:39.335Z</updated>
+  <updated>2023-02-08T12:58:00.222Z</updated>
   <id>https://alnthy.github.io/</id>
   
   <author>
@@ -21,10 +21,10 @@
     <link href="https://alnthy.github.io/2023/02/02/docker%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
     <id>https://alnthy.github.io/2023/02/02/docker%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</id>
     <published>2023-02-01T23:57:45.000Z</published>
-    <updated>2023-02-08T12:50:39.335Z</updated>
+    <updated>2023-02-08T12:58:00.222Z</updated>
     
     
-    <summary type="html">&lt;h2 id=&quot;什么是docker？&quot;&gt;&lt;a href=&quot;#什么是docker？&quot; class=&quot;headerlink&quot; title=&quot;什么是docker？&quot;&gt;&lt;/a&gt;什么是docker？&lt;/h2&gt;&lt;p&gt;Docker 是一个开源的应用容器引擎，让开发者可以打包他们的应用以及依赖包到一个可移植的容器中,然后发布到任何流行的Linux或Windows操作系统的机器上,也可以实现虚拟化,容器是完全使用沙箱机制,相互之间不会有任何接口。 —- &lt;a href=&quot;http://nodejs.cn/download/&quot;&gt;百度百科&lt;/a&gt;&lt;/p&gt;</summary>
+    <summary type="html">&lt;h2 id=&quot;什么是docker？&quot;&gt;&lt;a href=&quot;#什么是docker？&quot; class=&quot;headerlink&quot; title=&quot;什么是docker？&quot;&gt;&lt;/a&gt;什么是docker？&lt;/h2&gt;&lt;p&gt;Docker 是一个开源的应用容器引擎，让开发者可以打包他们的应用以及依赖包到一个可移植的容器中,然后发布到任何流行的Linux或Windows操作系统的机器上,也可以实现虚拟化,容器是完全使用沙箱机制,相互之间不会有任何接口。 —- &lt;a href=&quot;https://baike.baidu.com/item/Docker/13344470&quot;&gt;百度百科&lt;/a&gt;&lt;/p&gt;</summary>
     
     
     
@@ -36,6 +36,37 @@
     <category term="docker" scheme="https://alnthy.github.io/tags/docker/"/>
     
     <category term="学习" scheme="https://alnthy.github.io/tags/%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>关于iStoreOSopenwrt拨号上网ipv6无网络访问权限问题</title>
+    <link href="https://alnthy.github.io/2023/01/03/%E5%85%B3%E4%BA%8EiStoreOSopenwrt%E6%8B%A8%E5%8F%B7%E4%B8%8A%E7%BD%91ipv6%E6%97%A0%E7%BD%91%E7%BB%9C%E8%AE%BF%E9%97%AE%E6%9D%83%E9%99%90%E9%97%AE%E9%A2%98/"/>
+    <id>https://alnthy.github.io/2023/01/03/%E5%85%B3%E4%BA%8EiStoreOSopenwrt%E6%8B%A8%E5%8F%B7%E4%B8%8A%E7%BD%91ipv6%E6%97%A0%E7%BD%91%E7%BB%9C%E8%AE%BF%E9%97%AE%E6%9D%83%E9%99%90%E9%97%AE%E9%A2%98/</id>
+    <published>2023-01-03T13:01:14.000Z</published>
+    <updated>2023-02-09T12:25:33.119Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;今天装上iStoreOS，使用拨号上网时发现电脑在已分配公网ipv6地址的情况下ipv6无网络访问权限。&lt;/p&gt;
+&lt;p&gt;自己琢磨了半天发现还是不行，就是ipv6上不了网；&lt;/p&gt;
+&lt;p&gt;后面跟着恩山上大佬的帖子和b站的视频操作，取消禁止解析 IPv6 DNS</summary>
+        
+      
+    
+    
+    
+    <category term="软路由" scheme="https://alnthy.github.io/categories/%E8%BD%AF%E8%B7%AF%E7%94%B1/"/>
+    
+    
+    <category term="软路由" scheme="https://alnthy.github.io/tags/%E8%BD%AF%E8%B7%AF%E7%94%B1/"/>
+    
+    <category term="linux" scheme="https://alnthy.github.io/tags/linux/"/>
+    
+    <category term="openwrt" scheme="https://alnthy.github.io/tags/openwrt/"/>
     
   </entry>
   
